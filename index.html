@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gano Excel Казахстан: Ваша Возможность</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .kpi-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .kpi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .kpi-icon {
+            font-size: 3rem;
+            line-height: 1;
+        }
+        .kpi-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            color: #118AB2;
+        }
+        .kpi-text {
+            font-size: 1rem;
+            color: #073B4C;
+            margin-top: 0.5rem;
+        }
+        .flowchart-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        .flowchart-step .step-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #118AB2;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+            border: 4px solid #FFD166;
+            z-index: 10;
+        }
+        .flowchart-step .step-text {
+            margin-top: 1rem;
+            font-weight: 600;
+            color: #073B4C;
+        }
+        .flowchart-connector {
+            position: absolute;
+            top: 25px;
+            left: 50%;
+            width: 100%;
+            height: 4px;
+            background-color: #118AB2;
+            z-index: 5;
+        }
+    </style>
+</head>
+<body class="text-[#073B4C]">
+
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-black text-[#073B4C]">Gano Excel: Ваш Шанс Здесь и Сейчас!</h1>
+            <p class="mt-2 text-lg text-[#118AB2]">Откройте мир здоровья, финансовой свободы и нового стиля жизни.</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <section id="global-presence" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-2">Фундамент Вашего Доверия</h2>
+            <p class="text-center text-lg max-w-3xl mx-auto mb-10">Gano Excel — это мировой лидер индустрии wellness с проверенной репутацией. Эти цифры говорят сами за себя.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="kpi-card">
+                    <div class="kpi-icon">📅</div>
+                    <div class="kpi-number">25+</div>
+                    <div class="kpi-text">Лет на мировом рынке</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon">🌍</div>
+                    <div class="kpi-number">100</div>
+                    <div class="kpi-text">Стран присутствия</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon">👥</div>
+                    <div class="kpi-number">10<span class="text-2xl"> млн</span></div>
+                    <div class="kpi-text">Успешных партнеров</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon">🏆</div>
+                    <div class="kpi-number">№1</div>
+                    <div class="kpi-text">В оздоровительной индустрии</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ganoderma-secret" class="mb-16 bg-white rounded-lg shadow-lg p-8">
+            <h2 class="text-3xl font-bold text-center mb-2">Источник Нашей Силы: Чудо Ганодермы</h2>
+            <p class="text-center text-lg max-w-3xl mx-auto mb-10">В основе каждого продукта лежит Ганодерма Лусидум — «гриб бессмертия». Мы раскрыли его потенциал с помощью науки.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <h3 class="text-2xl font-bold text-[#06D6A0] mb-2">6 Лучших Сортов</h3>
+                    <p>Мы используем 6 самых питательных видов Ганодермы для максимального синергетического эффекта.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <h3 class="text-2xl font-bold text-[#06D6A0] mb-2">100% Растворимость</h3>
+                    <p>Наша запатентованная технология создает единственный в мире 100% водорастворимый экстракт для максимального усвоения.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <h3 class="text-2xl font-bold text-[#06D6A0] mb-2">Высшая Концентрация</h3>
+                    <p>Из <span class="font-bold">25 кг</span> грибов мы получаем всего <span class="font-bold">1 кг</span> мощнейшего экстракта, обеспечивая непревзойденную силу.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="career-path" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-2">Ваш Карьерный Путь: Лестница Успеха</h2>
+            <p class="text-center text-lg max-w-3xl mx-auto mb-10">Наш карьерный план прост и прозрачен. Чем выше ваш статус — тем больше ваш доход и кэшбэк. Продвигайтесь по лестнице и увеличивайте свою прибыль!</p>
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <div class="chart-container">
+                    <canvas id="careerChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="duplication-power" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-2">Сила Дупликации: От Личных Усилий к Экспоненциальному Росту</h2>
+            <p class="text-center text-lg max-w-3xl mx-auto mb-10">Настоящий успех — в построении команды. Этот график показывает, как ваш доход может взлететь, когда вы и ваши партнеры работаете вместе. Личный бонус стабилен, но командный бонус растет в геометрической прогрессии!</p>
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <div class="chart-container">
+                    <canvas id="incomeGrowthChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-to-start" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-2">Ваши 5 Простых Шагов к Успеху</h2>
+            <p class="text-center text-lg max-w-3xl mx-auto mb-10">Начать свой путь с Gano Excel просто. Следуйте этим шагам, чтобы запустить свой бизнес и начать менять свою жизнь уже сегодня.</p>
+            <div class="relative">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 md:gap-0">
+                    <div class="flowchart-step">
+                        <div class="step-number">1</div>
+                        <div class="step-text">Приобретите Пакет GPOP</div>
+                        <div class="flowchart-connector hidden md:block"></div>
+                    </div>
+                    <div class="flowchart-step">
+                        <div class="step-number">2</div>
+                        <div class="step-text">Зарегистрируйтесь в системе</div>
+                        <div class="flowchart-connector hidden md:block"></div>
+                    </div>
+                    <div class="flowchart-step">
+                        <div class="step-number">3</div>
+                        <div class="step-text">Пройдите Обучение</div>
+                        <div class="flowchart-connector hidden md:block"></div>
+                    </div>
+                    <div class="flowchart-step">
+                        <div class="step-number">4</div>
+                        <div class="step-text">Используйте Возможности</div>
+                        <div class="flowchart-connector hidden md:block"></div>
+                    </div>
+                    <div class="flowchart-step">
+                        <div class="step-number">5</div>
+                        <div class="step-text">Наслаждайтесь Новой Жизнью!</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#073B4C] text-white text-center py-8">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-2">Готовы Сделать Первый Шаг?</h2>
+            <p class="text-lg mb-4">Ваш шанс на здоровье, свободу и стабильность — здесь и сейчас!</p>
+            <p class="text-xl font-semibold bg-[#FF6B6B] inline-block px-6 py-3 rounded-lg">Поговорите с человеком, который дал вам эту ссылку!</p>
+        </div>
+    </footer>
+
+    <script>
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            } else {
+                return label;
+            }
+        };
+
+        const processLabels = (labels) => {
+            const MAX_LENGTH = 16;
+            return labels.map(label => {
+                if (label.length <= MAX_LENGTH) {
+                    return label;
+                }
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + word).length > MAX_LENGTH) {
+                        lines.push(currentLine.trim());
+                        currentLine = '';
+                    }
+                    currentLine += word + ' ';
+                });
+                lines.push(currentLine.trim());
+                return lines;
+            });
+        };
+
+        const careerChartCtx = document.getElementById('careerChart').getContext('2d');
+        const careerChart = new Chart(careerChartCtx, {
+            type: 'bar',
+            data: {
+                labels: ['START', 'M', 'RM', 'DM', 'SDM', 'GDM'],
+                datasets: [{
+                    label: 'Кэшбэк (%)',
+                    data: [15, 20, 25, 30, 35, 40],
+                    backgroundColor: [
+                        '#FFD166',
+                        '#FFB366',
+                        '#FF9566',
+                        '#FF7766',
+                        '#FF6B6B',
+                        '#06D6A0'
+                    ],
+                    borderColor: '#ffffff',
+                    borderWidth: 2,
+                    borderRadius: 5,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Процент Кэшбэка'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Карьерный Ранг'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Рост Кэшбэка по Карьерной Лестнице',
+                        font: {
+                            size: 18
+                        }
+                    }
+                }
+            }
+        });
+
+        const incomeGrowthChartCtx = document.getElementById('incomeGrowthChart').getContext('2d');
+        const incomeGrowthChart = new Chart(incomeGrowthChartCtx, {
+            type: 'line',
+            data: {
+                labels: ['1-й месяц', '2-й месяц', '3-й месяц', '4-й месяц', '5-й месяц', '6-й месяц'],
+                datasets: [{
+                    label: 'Личный Бонус',
+                    data: [580, 580, 580, 580, 580, 580],
+                    borderColor: '#FFD166',
+                    backgroundColor: '#FFD166',
+                    tension: 0.1,
+                    borderWidth: 3,
+                }, {
+                    label: 'Командный Бонус',
+                    data: [0, 540, 4710, 23960, 124680, 339180],
+                    borderColor: '#06D6A0',
+                    backgroundColor: '#06D6A0',
+                    tension: 0.1,
+                    fill: true,
+                    borderWidth: 3,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        type: 'logarithmic',
+                        title: {
+                            display: true,
+                            text: 'Сумма Бонусов (Логарифмическая шкала)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Период'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Прогнозируемый Рост Дохода за 6 Месяцев',
+                        font: {
+                            size: 18
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
